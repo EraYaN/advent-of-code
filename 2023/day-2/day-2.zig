@@ -122,6 +122,8 @@ fn doRoundPart2(alloc: std.mem.Allocator, games: []Game) !u32 {
 
 fn solve(alloc: std.mem.Allocator, input: []const u8) ![2]u64 {
     var games = try parseAll(alloc, input);
+    defer alloc.free(games);
+    defer for (games) |*m| alloc.free(m.hands);
     const part1 = try doRoundPart1(alloc, games);
     const part2 = try doRoundPart2(alloc, games);
 

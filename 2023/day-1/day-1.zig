@@ -116,6 +116,7 @@ fn doRoundPart2(alloc: std.mem.Allocator, lines: [][]const u8) !u32 {
 
 fn solve(alloc: std.mem.Allocator, input: []const u8) ![2]u64 {
     var lines = try parseAll(alloc, input);
+    defer alloc.free(lines);
 
     const part1 = try doRoundPart1(alloc, lines);
     const part2 = try doRoundPart2(alloc, lines);
@@ -139,6 +140,8 @@ pub fn main() !void {
 
 test "test-input" {
     std.debug.print("\n", .{});
-    const sol = try solve(std.testing.allocator, @embedFile("test2.txt"));
-    std.debug.print("Part 1: {d}\nPart 2: {d}\n", .{ sol[0], sol[1] });
+    const sol = try solve(std.testing.allocator, @embedFile("test.txt"));
+    std.debug.print("Test1: Part 1: {d}\nPart 2: {d}\n", .{ sol[0], sol[1] });
+    const sol2 = try solve(std.testing.allocator, @embedFile("test2.txt"));
+    std.debug.print("Test 2: Part 1: {d}\nPart 2: {d}\n", .{ sol2[0], sol2[1] });
 }
