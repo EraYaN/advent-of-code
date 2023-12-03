@@ -30,5 +30,20 @@
             "preLaunchTask": "zig-build",
             "MIMode": "lldb"
         },
+        {
+            "name": "Day 3 (macOS)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-3",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+            "MIMode": "lldb"
+        }
     ]
 }
