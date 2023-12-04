@@ -44,6 +44,21 @@
             "externalConsole": false,
             "preLaunchTask": "zig-build",
             "MIMode": "lldb"
+        },
+        {
+            "name": "Day 4 (macOS)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-4",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+            "MIMode": "lldb"
         }
     ]
 }
