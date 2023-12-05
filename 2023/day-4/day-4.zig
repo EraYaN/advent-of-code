@@ -20,7 +20,7 @@ const Card = struct {
                 }
             }
         }
-        std.debug.print("{} points in card {}\n", .{ points, self.id });
+        //std.debug.print("{} points in card {}\n", .{ points, self.id });
         return points;
     }
 
@@ -43,10 +43,10 @@ const Card = struct {
         const colon = std.mem.indexOf(u8, line, ":").? + 1;
         const lastSpace = std.mem.lastIndexOf(u8, line[0..colon], " ").?;
         const card_id_text = line[lastSpace + 1 .. colon - 1];
-        std.debug.print("Card ID: '{s}'\n", .{card_id_text});
+        //std.debug.print("Card ID: '{s}'\n", .{card_id_text});
         const card_id = try std.fmt.parseInt(u64, card_id_text, 10);
         const restline = line[colon..];
-        std.debug.print("Card ID: {}\nRest of the line: '{s}'\n", .{ card_id, restline });
+        //std.debug.print("Card ID: {}\nRest of the line: '{s}'\n", .{ card_id, restline });
         var numbersArr = std.ArrayList(u64).init(alloc);
         var winningNumbersArr = std.ArrayList(u64).init(alloc);
         defer numbersArr.deinit();
@@ -59,10 +59,10 @@ const Card = struct {
             while (numbers.next()) |number| {
                 var num = try std.fmt.parseInt(u64, number, 10);
                 if (winning) {
-                    std.debug.print("Winning Number: '{s}' -> '{d}'\n", .{ number, num });
+                    //std.debug.print("Winning Number: '{s}' -> '{d}'\n", .{ number, num });
                     try winningNumbersArr.append(num);
                 } else {
-                    std.debug.print("Number: '{s}' -> '{d}'\n", .{ number, num });
+                    //std.debug.print("Number: '{s}' -> '{d}'\n", .{ number, num });
                     try numbersArr.append(num);
                 }
 
@@ -144,7 +144,7 @@ pub fn main() !void {
     std.debug.print("Part 1: {d}\nPart 2: {d}\n", .{ sol[0], sol[1] });
 
     if (try util.parse_cli_args(allocator)) {
-        var result = try util.benchmark(allocator, solve, .{ allocator, @embedFile("input.txt") }, .{ .warmup = 10, .trials = 1000 });
+        var result = try util.benchmark(allocator, solve, .{ allocator, @embedFile("input.txt") }, .{ .warmup = 3, .trials = 50 });
         defer result.deinit();
         result.printSummary();
     }

@@ -178,7 +178,7 @@ pub fn main() !void {
     std.debug.print("Part 1: {d}\nPart 2: {d}\n", .{ sol[0], sol[1] });
 
     if (try util.parse_cli_args(allocator)) {
-        var result = try util.benchmark(allocator, solve, .{ allocator, @embedFile("input.txt") }, .{ .warmup = 10, .trials = 1000 });
+        var result = try util.benchmark(allocator, solve, .{ allocator, @embedFile("input.txt") }, .{ .warmup = 1, .trials = 3 });
         defer result.deinit();
         result.printSummary();
     }
