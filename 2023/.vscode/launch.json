@@ -74,5 +74,47 @@
             "externalConsole": false,
             "preLaunchTask": "zig-build",
         },
+        {
+            "name": "Day 6 (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-6.exe",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+        },
+        {
+            "name": "Day 7 (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-7.exe",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+        },
+        {
+            "name": "Day 8 (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-8.exe",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+        },
     ]
 }

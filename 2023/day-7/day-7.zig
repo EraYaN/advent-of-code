@@ -19,35 +19,11 @@ const Bid = struct {
 const HandTypeScore = struct { hand: HandType, card_score: u64 };
 
 const cards = [_]u8{
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    'J',
-    'T',
-    'Q',
-    'K',
-    'A',
+    '2', '3', '4', '5', '6', '7', '8', '9', 'J', 'T', 'Q', 'K', 'A',
 };
 
 const cards2 = [_]u8{
-    'J',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    'T',
-    'Q',
-    'K',
-    'A',
+    'J', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'Q', 'K', 'A',
 };
 
 fn cardScore(c: u8) u64 {
