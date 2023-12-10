@@ -116,5 +116,35 @@
             "externalConsole": false,
             "preLaunchTask": "zig-build",
         },
+        {
+            "name": "Day 9 (macOS)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-9",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Day 10 (macOS)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-10",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+            "MIMode": "lldb"
+        },
     ]
 }
