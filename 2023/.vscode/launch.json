@@ -203,5 +203,19 @@
             "preLaunchTask": "zig-build",
             "MIMode": "lldb"
         },
+        {
+            "name": "Day 15 (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-15.exe",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+        },
     ]
 }
