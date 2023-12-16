@@ -216,6 +216,20 @@
             "environment": [],
             "externalConsole": false,
             "preLaunchTask": "zig-build",
+        },{
+            "name": "Day 16 (macOS)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/day-16",
+            "args": [
+                //"bench"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "zig-build",
+            "MIMode": "lldb"
         },
     ]
 }
